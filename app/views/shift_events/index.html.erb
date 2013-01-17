@@ -1,0 +1,31 @@
+<h1>Listing shift_events</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Organization</th>
+    <th>Location</th>
+    <th>Admin name</th>
+    <th>Admin email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @shift_events.each do |shift_event| %>
+  <tr>
+    <td><%= shift_event.title %></td>
+    <td><%= shift_event.organization %></td>
+    <td><%= shift_event.location %></td>
+    <td><%= shift_event.admin_name %></td>
+    <td><%= shift_event.admin_email %></td>
+    <td><%= link_to 'Show', shift_event %></td>
+    <td><%= link_to 'Edit', edit_shift_event_path(shift_event) %></td>
+    <td><%= link_to 'Destroy', shift_event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Shift event', new_shift_event_path %>

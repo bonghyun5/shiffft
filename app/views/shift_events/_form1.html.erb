@@ -1,0 +1,38 @@
+<%= form_for(@shift_event) do |f| %>
+  <h4>CREATE NEW EVENT</h4>
+  <% if @shift_event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@shift_event.errors.count, "error") %> prohibited this shift_event from being saved:</h2>
+
+      <ul>
+      <% @shift_event.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label "Organization" %>
+    <%= f.text_field :organization %>
+  </div>
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label "Your name" %>
+    <%= f.text_field :admin_name %>
+  </div>
+  <div class="field">
+    <%= f.label "Email" %>
+    <%= f.text_field :admin_email %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Create", class: "medium button" %>
+  </div>
+<% end %>

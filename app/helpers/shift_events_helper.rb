@@ -1,0 +1,2 @@
+module ShiftEventsHelper
+end

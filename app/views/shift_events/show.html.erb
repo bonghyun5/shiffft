@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @shift_event.title %>
+</p>
+
+<p>
+  <b>Organization:</b>
+  <%= @shift_event.organization %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @shift_event.location %>
+</p>
+
+<p>
+  <b>Admin name:</b>
+  <%= @shift_event.admin_name %>
+</p>
+
+<p>
+  <b>Admin email:</b>
+  <%= @shift_event.admin_email %>
+</p>
+
+
+<%= link_to 'Edit', edit_shift_event_path(@shift_event) %> |
+<%= link_to 'Back', shift_events_path %>
