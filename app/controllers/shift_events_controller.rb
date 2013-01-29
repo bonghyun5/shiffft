@@ -40,19 +40,23 @@ class ShiftEventsController < ApplicationController
   # POST /shift_events
   # POST /shift_events.json
   def create
+    
     @shift_event = ShiftEvent.new(params[:shift_event])
-
+    
     respond_to do |format|
       if @shift_event.save
-        format.html { redirect_to @shift_event, notice: 'Shift event was successfully created.' }
+        session[:shift_event] = @shift_event.id
+        format.html { redirect_to new_time_table_path}
         format.json { render json: @shift_event, status: :created, location: @shift_event }
       else
-        format.html { render action: "new" }
+        format.html { render home_index_path }
         format.json { render json: @shift_event.errors, status: :unprocessable_entity }
       end
     end
+    
   end
-
+  
+  
   # PUT /shift_events/1
   # PUT /shift_events/1.json
   def update

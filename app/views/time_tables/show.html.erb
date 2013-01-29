@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Shift events:</b>
+  <%= @time_table.shift_events_id %>
+</p>
+
+<p>
+  <b>Mon:</b>
+  <%= @time_table.mon %>
+</p>
+
+<p>
+  <b>Tues:</b>
+  <%= @time_table.tues %>
+</p>
+
+<p>
+  <b>Wed:</b>
+  <%= @time_table.wed %>
+</p>
+
+<p>
+  <b>Thur:</b>
+  <%= @time_table.thur %>
+</p>
+
+<p>
+  <b>Fri:</b>
+  <%= @time_table.fri %>
+</p>
+
+<p>
+  <b>Sat:</b>
+  <%= @time_table.sat %>
+</p>
+
+<p>
+  <b>Sun:</b>
+  <%= @time_table.sun %>
+</p>
+
+
+<%= link_to 'Edit', edit_time_table_path(@time_table) %> |
+<%= link_to 'Back', time_tables_path %>

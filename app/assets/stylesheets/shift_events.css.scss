@@ -15,16 +15,16 @@
 	
 	
 	padding: 60px 150px 30px 150px;
-	border-radius: 20px;
+	border-radius: 10px;
 	border: solid 5px #42526C;
 	margin-bottom: 50px;
-	box-shadow: 1px 4px 20px grey;
-	
+
+
 	label
 	{
 		color: white;
 		font-weight: 300;
-		font-size: 17px;
+		font-size: 16px;
 		letter-spacing: 1px;
 	}
 	.actions
@@ -43,7 +43,33 @@
 		text-align: center;
 		color: white;
 		font-size: 33px;
-		font-weight: 300;
+		font-weight: 200;
 		margin-bottom: 17px;
 	}
+	
+	#error_explanation
+	{
+		background-color: #334e69;
+		border: solid 3px #2d445b;
+		text-align: center;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		padding: 10px 0;
+		border-radius: 10px;
+		ul
+		{
+			list-style-type: none;
+			margin: 0;
+			li
+			{
+			font-weight: 600;
+			font-family: Helvetica,sans-serif;
+			font-size: 16px;
+			color: white;
+			padding: 5px 0;
+			}
+		}
+	}
 }
+
+

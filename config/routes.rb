@@ -1,11 +1,10 @@
 Shift::Application.routes.draw do
+  
+  resources :time_tables
+
   resources :shift_events
 
-
   get "home/index"
-
-  resources :users
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

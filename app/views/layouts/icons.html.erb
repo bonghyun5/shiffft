@@ -1,9 +1,18 @@
 	<div class = "one columns"></div>
-	<div class = "two columns" id = "icon-active">
+	<% if current_page? :action => "index" %>
+	<div class = "two columns" id =  "icon-active">
+	<% else %>
+	<div class = "two columns">
+	<% end %>
 		<i class="foundicon-compass"></i>
 		<h2>Get Started</h3>
 	</div>
+
+	<% if current_page? :action => "new", :controller => "time_tables" %>
+	<div class = "two columns" id =  "icon-active">
+	<% else %>
 	<div class = "two columns">
+	<% end %>
 		<i class="foundicon-calendar" id ="bottom-icon"></i>
 		<h2>Set Date</h3>
 	</div>

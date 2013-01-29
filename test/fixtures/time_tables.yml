@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  shift_events_id: 1
+  mon: 1
+  tues: 1
+  wed: 1
+  thur: 1
+  fri: 1
+  sat: 1
+  sun: 1
+
+two:
+  shift_events_id: 1
+  mon: 1
+  tues: 1
+  wed: 1
+  thur: 1
+  fri: 1
+  sat: 1
+  sun: 1

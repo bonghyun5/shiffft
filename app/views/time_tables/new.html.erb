@@ -1,0 +1,168 @@
+<header class = "main-header">
+	<div class = "row main-banner">
+		<div class = "twelve columns">
+			<h1> Set time and date for your shift </h1>
+			<h4> Customize your time. Click and drag to make further changes.</h4>
+		</div>
+	</div>
+</header>
+
+<div class = "row icon-row">
+	<%= render template: 'layouts/icons.html.erb'%>
+</div>
+
+<div class = "row" id = "table-init">
+	<div class = "nine columns">
+		<h4> Schedule for <%= @shift_event.title %></h4>
+		<%= render template: 'time_tables/_form.html.erb'%>
+	</div>
+	<div class = "three columns">
+			<div class = "row">
+				<div class = "two columns">
+					<div id = "block"></div> 
+				</div>
+				<div class = "ten columns setting-saying">
+					<p><b>Time blocked</b> </br>[Don't need people at this time]</p>
+				</div>
+			</div>
+			<div class = "row">
+				<div class = "two columns">
+					<div id = "avail"></div>
+				</div>
+				<div class = "ten columns setting-saying">
+					 <p><b>Time freed</b> </br>[Need people at this time]</p>
+				</div>
+			</div>
+		</br>
+		<div class = "time-table-setting">
+			<h4> Customize </h4>
+			<h5> Day </h5>
+			<form class="custom day-select-1">
+				
+			  <label>From</label>
+			
+			  <select style="display:none;" >
+				<option>Sunday</option>
+				<option selected>Monday</option>
+				<option>Tuesday</option>
+				<option>Wednesday</option>
+				<option>Thursday</option>
+				<option>Friday</option>
+				<option>Saturday</option>
+			  </select>
+			
+			</form>
+			
+			<form class="custom day-select-2">
+	     	  <label>To</label>
+			  
+			  <select style="display:none;">
+				<option>Sunday</option>
+				<option>Monday</option>
+				<option>Tuesday</option>
+				<option>Wednesday</option>
+				<option>Thursday</option>
+				<option selected>Friday</option>
+				<option>Saturday</option>
+			  </select>
+			 
+			</form>
+			
+			<h5> Time </h5>
+			
+			<form class="custom time-select-1">
+			  <label>From</label>
+				
+			  <select>
+				<option id = "0">12am</option>
+				<option id = "1">1am</option>
+				<option id = "2">2am</option>
+				<option id = "3">3am</option>
+				<option id = "4">4am</option>
+				<option id = "5">5am</option>
+				<option id = "6">6am</option>
+				<option id = "7">7am</option>
+				<option id = "8">8am</option>
+				<option selected id = "9">9am</option>
+				<option id = "10">10am</option>
+				<option id = "11">11am</option>
+				<option id = "12">12pm</option>
+				<option id = "13">1pm</option>
+				<option id = "14">2pm</option>
+				<option id = "15">3pm</option>
+				<option id = "16">4pm</option>
+				<option id = "17">5pm</option>
+				<option id = "18">6pm</option>
+				<option id = "19">7pm</option>
+				<option id = "20">8pm</option>
+				<option id = "21">9pm</option>
+				<option id = "22">10pm</option>
+				<option id = "23">11pm</option>
+			  </select>
+
+			</form>
+			
+			<form class="custom time-select-2">
+			  <label>To</label>
+			
+			  <select id = "select-2">
+				<option id = "0">12am</option>
+				<option id = "1">1am</option>
+				<option id = "2">2am</option>
+				<option id = "3">3am</option>
+				<option id = "4">4am</option>
+				<option id = "5">5am</option>
+				<option id = "6">6am</option>
+				<option id = "7">7am</option>
+				<option id = "8">8am</option>
+				<option id = "9">9am</option>
+				<option id = "10">10am</option>
+				<option id = "11">11am</option>
+				<option id = "12">12pm</option>
+				<option id = "13">1pm</option>
+				<option id = "14">2pm</option>
+				<option selected id = "15">3pm</option>
+				<option id = "16">4pm</option>
+				<option id = "17">5pm</option>
+				<option id = "18">6pm</option>
+				<option id = "19">7pm</option>
+				<option id = "20">8pm</option>
+				<option id = "21">9pm</option>
+				<option id = "22">10pm</option>
+				<option id = "23">11pm</option>
+			  </select>
+			
+			</form>
+			
+			</br>
+			<form class ="custom time-buttons">
+				<input type="button" class = "small button" id = "mark-all" value="Mark All">		
+				</br>
+				<input type='button' class = "small button" id='clear-all' value="Clear All" />	
+			</form>
+		 
+			</br>
+			
+		</div>
+		<div id = "submit-info">
+			<div id = "sun">
+			</div>
+			<div id = "mon">
+			</div>
+			<div id = "tues">
+			</div>
+			<div id = "wed">
+			</div>
+			<div id = "thur">
+			</div>
+			<div id = "fri">
+			</div>
+			<div id ="sat">
+			</div>
+		</div>
+		<%= form_for(@time_table) do |f| %>
+	    	<%= f.submit "Next", class: "large button", id: "time-table-submit" %>
+		<% end %>
+	</div>
+</div>
+
